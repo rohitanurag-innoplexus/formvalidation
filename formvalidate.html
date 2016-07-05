@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Form Validator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="./bootstrap/bootstrap.css" media="screen">
+  <link rel="stylesheet" href="./bootstrap/custom.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.js"></script>
+
+</head>
+
+
+<body ng-app="myApp" ng-init="icase=''" >
+  <div class="root">
+    <div class="col-lg-4 col-md-2 col-md-offset-4">
+      <div class=" bs-component">
+<br>
+<br>
+<br>
+
+<form name="myForm">
+
+
+  <div class="form-group">
+    <input type="text" placeholder="UserName" class="form-control" name="uname" ng-model="uname"  required username i-case='usern'  aria-describedby="helpBlock2" >
+
+    <span id="helpBlock2" class="help-block"><validator i-case="usern">
+    </validator>
+</span>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="FirstName" class="form-control" name="fname" ng-model="fname"  required firstname i-case='firstn'  aria-describedby="helpBlock2" >
+
+    <span id="helpBlock2" class="help-block"><validator i-case="firstn">
+    </validator>
+</span>
+  </div>
+  <div class="form-group">
+    <input type="text" placeholder="LastName" class="form-control" name="lname" ng-model="lname"  required lastname i-case='lastn'  aria-describedby="helpBlock2" >
+
+    <span id="helpBlock2" class="help-block"><validator i-case="lastn">
+    </validator>
+</span>
+  </div>
+  <div class="form-group">
+    <input type="text"  placeholder="Email" class="form-control" name="email" ng-model="email"  required email i-case='em'  aria-describedby="helpBlock2" >
+
+    <span id="helpBlock2" class="help-block"><validator i-case="em">
+    </validator>
+</span>
+  </div>
+  <div class="form-group">
+    <input type="password" placeholder="Password" class="form-control" name="passwd" ng-model="passwd"  required password i-case='pswd'  aria-describedby="helpBlock2" >
+
+    <span id="helpBlock2" class="help-block"><validator i-case="pswd">
+    </validator>
+</span>
+  </div>
+
+
+
+
+</form>
+</div>
+</div>
+
+</div>
+
+<script src="./validator/validator.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="./bootstrap/bootstrap.min.js"></script>
+<script src="./bootstrap/custom.js"></script>
+
+</body>
+</html>
